@@ -1,0 +1,30 @@
+<div id="<%= dom_id articulo %>">
+  <p>
+    <strong>Nombre:</strong>
+    <%= articulo.nombre %>
+  </p>
+
+  <p>
+    <strong>Descripcion:</strong>
+    <%= articulo.descripcion %>
+  </p>
+
+  <p>
+    <strong>Condicion:</strong>
+    <%= articulo.condicion %>
+  </p>
+
+  <p>
+    <strong>Precio:</strong>
+    <%= articulo.precio %>
+  </p>
+
+  <p>
+    <strong>Marca:</strong>
+    <%#= articulo.marca_id %>
+    <% @marcas.each do |m| %>
+        <%= m.nombre if articulo.marca_id == m.id %> 
+    <% end %>
+  </p>
+
+</div>
